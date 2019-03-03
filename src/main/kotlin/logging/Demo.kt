@@ -35,7 +35,7 @@ class WeatherController(private val service: WeatherService = WeatherService()) 
     }
 }
 
-enum class ErrorMessage(private val code: String, private val message: String) {
+enum class ErrorMessage(val code: String, val message: String) {
     WEATHER_LOADING_ERROR("WS0001", "Couldn't load weather for city of {}"),
     CITY_NOT_SUPPORTED("WS0002", "City not supported");
 
